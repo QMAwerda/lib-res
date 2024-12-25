@@ -1,0 +1,160 @@
+$blue: #d047ac;
+
+.root {
+	background-color: #fff;
+	border: 1px solid #dedede;
+	border-radius: 6px;
+	overflow: hidden;
+	margin-bottom: 15px;
+	position: relative;
+
+	&:hover {
+		border: 1px solid red;
+		box-shadow: 0 0 0 1px red;
+
+		.editButtons {
+			opacity: 1;
+		}
+	}
+
+	&Full {
+		&:hover {
+			background-color: #fff;
+			border: 1px solid #dedede;
+			box-shadow: none;
+		}
+	}
+}
+
+.image {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+
+	&Full {
+		min-height: 300px;
+		height: 100%;
+	}
+}
+
+.wrapper {
+	padding: 10px 20px 20px;
+}
+
+.content {
+	margin: 30px 0 50px;
+
+	p {
+		font-size: 22px;
+		line-height: 36px;
+	}
+}
+
+.indention {
+	padding-left: 40px;
+}
+
+.title {
+	font-size: 28px;
+	margin: 0;
+
+	a {
+		text-decoration: none;
+		color: #000;
+
+		&:hover {
+			color: red;
+		}
+	}
+
+	&Full {
+		font-size: 42px;
+		font-weight: 900;
+	}
+}
+
+.postDetails {
+	list-style: none;
+	padding: 0;
+	margin: 20px 0 0 0;
+
+	li {
+		display: inline-flex;
+		align-items: center;
+		font-size: 14px;
+		margin-right: 20px;
+		opacity: 0.5;
+
+		svg {
+			font-size: 18px;
+			margin-right: 5px;
+		}
+	}
+}
+
+.skeleton {
+	background-color: #fff;
+	border: 1px solid #dedede;
+	border-radius: 6px;
+	overflow: hidden;
+	margin-bottom: 15px;
+
+	&Content {
+		padding: 20px;
+	}
+
+	&Info {
+		margin-left: 50px;
+	}
+}
+
+.skeletonUser {
+	display: flex;
+
+	&Details {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.skeletonTags {
+	display: flex;
+
+	span {
+		margin-right: 15px;
+	}
+}
+
+.editButtons {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 10px;
+	opacity: 0;
+	transition: all 0.15s ease-in-out;
+}
+.button {
+	border: none;
+
+	margin-left: 10px;
+	color: #000;
+	background-color: #ff9696;
+	margin: 0 10px;
+	transition: transform 0.2s ease-in-out;
+	height: 50px;
+}
+.disabled {
+	background-color: #b8b8b8;
+	border: none;
+	border-radius: 10%;
+	pointer-events: none;
+	margin-left: 10px;
+	padding: 10px;
+
+	color: #000;
+	opacity: 0.5;
+}
+.description {
+	word-break: break-all;
+}

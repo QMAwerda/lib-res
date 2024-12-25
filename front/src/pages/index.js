@@ -1,0 +1,8 @@
+export { Home } from './Home'
+export { FullPost } from './FullPost'
+export { Registration } from './Registration'
+export { Login } from './Login'
+export { TagPosts } from './TagPosts'
+export { Orders } from './Orders'
+export { OrdersAdd } from './OrdersAdd'
+export { BooksAdd } from './BooksAdd'

@@ -1,0 +1,25 @@
+CREATE TABLE IF NOT EXISTS books(
+    isbn VARCHAR(13) PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+    author VARCHAR(50) NOT NULL,
+    publisher VARCHAR(50) NOT NULL,
+    yearPublished VARCHAR(4) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    fullName TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS orders (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id) ON DELETE CASCADE, 
+    isbn VARCHAR(13) REFERENCES books(isbn) ON DELETE CASCADE, 
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+у меня есть такие таблицы. Напиши мне sql запрос, который создаст order, а также, который обновит order,
+и, запрос, который выведет order на экран, найдя его по id заказа
